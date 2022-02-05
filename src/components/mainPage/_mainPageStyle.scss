@@ -1,15 +1,17 @@
+@import "../../css/variables";
+
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     row-gap: 10px;
     width: 60%;
-    margin: 0 auto;
+    margin: 10px auto;  
     .card-box {
-        border: 1px solid black;
         border-radius: 5px;
         width: 100%;
         padding: 20px;
+        background-color: $backgroundColorWhite;
         .owner-data {
             display: flex;
             align-items: center;
@@ -42,6 +44,16 @@
             .post-details {
                 margin-left: 20px;
                 width: 50%;
+                .post-title {
+                    text-transform: uppercase;
+                }
+                p:last-child {
+                    display: flex;
+                    align-items: center;
+                    i {
+                        color: $iconLikeColor;
+                    }
+                }
                 p {
                     margin-bottom: 15px;
                 }
@@ -49,8 +61,8 @@
                     display: flex;
                     p {
                         padding: 5px;
-                        background-color: red;
-                        color: white;
+                        background-color: $backgroundColorTags;
+                        color: $fontColorWhite;
                         margin-right: 5px;
                         /* word-break: break-all; */ /* try to set lower font-size for response*/
                     }
