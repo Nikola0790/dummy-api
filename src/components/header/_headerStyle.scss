@@ -1,0 +1,11 @@
+@import "../../css/variables";
+
+.container-header {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $backgroundColorWhite;
+    color: $fontColorPink;
+}

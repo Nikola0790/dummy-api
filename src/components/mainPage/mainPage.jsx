@@ -76,7 +76,7 @@ const MainPage = () => {
                     ))}
                   </div>
                   <p>
-                    <i class="material-icons">thumb_up</i>&nbsp;&nbsp;
+                    <i className="material-icons">thumb_up</i>&nbsp;&nbsp;
                     {item.likes}
                   </p>
                 </div>
