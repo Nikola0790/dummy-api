@@ -97,8 +97,23 @@
   background-color: #db2777;
   color: #ffffff;
   margin-right: 5px;
+  font-size: 12px;
   /* word-break: break-all; */
   /* try to set lower font-size for response*/
+}
+
+.container-header {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ffffff;
+  color: #db2777;
 }
 
 * {
