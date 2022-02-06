@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { actionsPosts } from "../../redux/posts/actions";
 import Pagination from "react-js-pagination";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -89,12 +90,16 @@ const MainPage = () => {
                   </p>
                 </div>
               </div>
-              <div className="post-data">
-                <div className="post-img">
-                  <img src={item.image} alt="postImage" />
-                </div>
+              <div className="post-data">   
+                  <div className="post-img">
+                    <Link to={`/postDetails/${item.id}`}> 
+                      <img src={item.image} alt="postImage" />
+                    </Link>
+                  </div>
                 <div className="post-details">
-                  <p className="post-title">{item.text}</p>
+                  <Link to={`/postDetails/${item.id}`}>
+                    <p className="post-title">{item.text}</p>
+                  </Link>
                   <div className="tags">
                     {item.tags.map((tag, i) => (
                       <p key={i}>{tag}</p>
