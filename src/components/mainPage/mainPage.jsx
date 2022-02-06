@@ -1,18 +1,43 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { actionsPosts } from "../../redux/posts/actions";
+import Pagination from "react-js-pagination";
 
 const MainPage = () => {
   const dispatch = useDispatch();
   const dataPosts = useSelector((state) => state.posts);
   const { loading, data, error } = dataPosts;
+  const [pageNumber, setPageNumber] = useState(1);
+  const [totalPosts, setTotalPosts] = useState(100);
+  const [postsPerPage, setPostsPerPage] = useState(10)
+  const pageRange = 5;
+  
 
   useEffect(() => {
-    dispatch(actionsPosts());
-  }, [dispatch]);
+    dispatch(actionsPosts(pageNumber));
+    if (loading === false ) {
+      setTotalPosts(data.data.total - 20)
+      setPostsPerPage(data.data.limit)
+    }
+  }, [dispatch, pageNumber]);
+
+  const handlePageChange = (pageNumber) => {
+    setPageNumber(pageNumber);
+  }
 
   return (
+    <>
+    <div className="pagination">
+        <Pagination
+          activePage={pageNumber}
+          itemsCountPerPage={postsPerPage}
+          totalItemsCount={totalPosts}
+          pageRangeDisplayed={pageRange}
+          onChange={handlePageChange.bind(this)}
+        />
+      </div>
     <div className="container">
+      
       {loading ? (
         <p>LOADING</p>
       ) : error !== "" ? (
@@ -86,6 +111,7 @@ const MainPage = () => {
         })
       )}
     </div>
+    </>
   );
 };
 
