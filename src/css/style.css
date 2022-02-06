@@ -144,6 +144,118 @@
   color: #db2777;
 }
 
+.container-singlePost {
+  width: 60%;
+  margin: 40px auto;
+}
+
+.container-singlePost .single-post-title {
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.container-singlePost .single-post-image {
+  width: 100%;
+  height: 600px;
+}
+
+.container-singlePost .single-post-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-singlePost .single-post-likes-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.container-singlePost .single-post-likes-tags p:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-singlePost .single-post-likes-tags p:first-child i {
+  color: #454cac;
+}
+
+.container-singlePost .single-post-likes-tags div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 50px;
+}
+
+.container-singlePost .single-post-likes-tags div p {
+  padding: 5px;
+  background-color: #db2777;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.container-singlePost .single-post-owner-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0;
+  position: relative;
+}
+
+.container-singlePost .single-post-owner-data .owner-picture {
+  height: 100px;
+  width: 20%;
+  margin-right: 30px;
+}
+
+.container-singlePost .single-post-owner-data .owner-picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.container-singlePost .single-post-owner-data .owner-name-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 35px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.container-singlePost .single-post-owner-data .owner-name-id p:last-child {
+  font-size: 14px;
+}
+
+.container-singlePost .single-post-owner-data button {
+  height: 50px;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: none;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #454cac;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
