@@ -6,16 +6,51 @@ import { actionsSinglePost } from "../../redux/singlePost/actions";
 const SinglePostDetails = () => {
     const {id} = useParams();
     const dispatch = useDispatch();
-    const data = useSelector(state => state.singlePost);
-    console.log(data);
+    const dataPost = useSelector(state => state.singlePost);
+    const {loading, data, error} = dataPost;
 
     useEffect(() => {
         dispatch(actionsSinglePost(id));
-    }, [dispatch])
-
+    }, [dispatch]);
     
 
-    return <p>post details</p>
+    return (
+        <div className="container-singlePost">
+            {loading ? (
+                <p>LOADING</p>
+            ) : error !== "" ? (
+                <p>{error}</p>
+            ) : (
+                <>
+                    <div className="single-post-title">
+                        <p>{data.data.text}</p>
+                    </div>
+                    <div className="single-post-image">
+                        <img src={`${data.data.image}`} alt="post-picture" />
+                    </div>
+                    <div className="single-post-likes-tags">
+                        <p><i className="material-icons">thumb_up</i>&nbsp;&nbsp; {data.data.likes}</p>
+                        <div>
+                            {data.data.tags.map((tag, i) => (
+                                <p key={i}>#{tag}</p>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="single-post-owner-data">
+                        <div className="owner-picture">
+                            <img src={`${data.data.owner.picture}`} alt="owner-pic" />
+                        </div>
+                        <div className="owner-name-id">
+                            <p>{data.data.owner.title}. {data.data.owner.firstName} {data.data.owner.lastName}</p>
+                            <p>ID: {data.data.owner.id}</p>
+                        </div>
+                        <button>EDIT POST</button>
+                    </div>
+                </>
+            )
+            }
+        </div>
+    )
 }
 
 export default SinglePostDetails;
