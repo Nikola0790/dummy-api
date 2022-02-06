@@ -11,3 +11,12 @@ export const getAllPosts = async (num) => {
   });
   return dataPosts
 };
+
+export const getPostDetails = async (id) => {
+  const data = await axios.get(`${url}post/${id}`, {
+    headers: {
+      'app-id': appId,
+    }
+  });
+  return data;
+}
