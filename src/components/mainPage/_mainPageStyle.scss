@@ -1,25 +1,5 @@
 @import "../../css/variables";
 
-.pagination {
-    display: flex;
-    width: 60%;
-    margin: 0 auto;
-    padding: 10px 0;
-    justify-content: center;
-    li {
-        list-style: none;   
-    }
-    .active a {
-    background-color: rgb(102, 99, 250);
-    color: $fontColorWhite;
-    }
-    a {
-        text-decoration: none;
-        border: 1px solid rgb(102, 99, 250);
-        padding: 5px 10px;
-        background-color: $backgroundColorWhite;
-    }
-}
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -90,5 +70,26 @@
                 }
             }
         }
+    }
+}
+
+.pagination {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 0;
+    justify-content: center;
+    li {
+        list-style: none;   
+    }
+    .active a {
+    background-color: $paginateColor;
+    color: $fontColorWhite;
+    }
+    a {
+        text-decoration: none;
+        border: 1px solid $paginateColor;
+        padding: 5px 10px;
+        background-color: $backgroundColorWhite;
     }
 }
