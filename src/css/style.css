@@ -256,6 +256,42 @@
   right: 0;
 }
 
+.container-edit-post {
+  width: 60%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.container-edit-post h1 {
+  text-align: center;
+  color: #ffffff;
+  margin: 50px 0;
+}
+
+.container-edit-post p {
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.container-edit-post input {
+  width: 100%;
+  padding: 15px 10px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+}
+
+.container-edit-post button {
+  padding: 10px 30px;
+  border-radius: 15px;
+  color: #ffffff;
+  background-color: #db2777;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 30px auto;
+}
+
 * {
   margin: 0;
   padding: 0;

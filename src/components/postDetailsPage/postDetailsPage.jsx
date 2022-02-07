@@ -2,16 +2,18 @@ import { useParams } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { actionsSinglePost } from "../../redux/singlePost/actions";
+import { Link } from "react-router-dom";
 
 const SinglePostDetails = () => {
     const {id} = useParams();
     const dispatch = useDispatch();
     const dataPost = useSelector(state => state.singlePost);
+    const checkEdit = useSelector(state => state.editedPost.loading);
     const {loading, data, error} = dataPost;
 
     useEffect(() => {
         dispatch(actionsSinglePost(id));
-    }, [dispatch]);
+    }, [dispatch, checkEdit]);
     
 
     return (
@@ -44,7 +46,9 @@ const SinglePostDetails = () => {
                             <p>{data.data.owner.title}. {data.data.owner.firstName} {data.data.owner.lastName}</p>
                             <p>ID: {data.data.owner.id}</p>
                         </div>
-                        <button>EDIT POST</button>
+                        <Link to="/editPost">
+                            <button>EDIT POST</button>
+                        </Link>
                     </div>
                 </>
             )
