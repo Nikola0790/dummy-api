@@ -3,6 +3,7 @@ import MainPage from "./components/mainPage/mainPage";
 import Header from "./components/header/header";
 import SinglePostDetails from './components/postDetailsPage/postDetailsPage';
 import EditPost from "./components/editPage/editPostPage";
+import CreatePost from "./components/createPostPage/createPost";
 import {
   BrowserRouter as Router,
   Routes,
@@ -18,8 +19,9 @@ function App() {
       <Routes>
         <Route path="/mainPage" element={<MainPage />} />
         <Route path="/postDetails/:id" element={<SinglePostDetails />} />
-        <Route path="/" element={<Navigate to="/mainPage" />} />
         <Route path="/editPost" element={<EditPost />} />
+        <Route path="/createPost" element={<CreatePost />} />
+        <Route path="/" element={<Navigate to="/mainPage" />} />
       </Routes>
     </Router>
     </>
