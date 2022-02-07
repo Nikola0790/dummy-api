@@ -33,3 +33,25 @@ export const updatePost = async (id, item) => {
   });
   return data;
 };
+
+// create post
+
+export const createPost = async (post) => {
+  const data = await axios.post(`${url}post/create`, post, {
+    headers: {
+      "app-id": appId,
+    }
+  });
+  return data;
+}
+
+
+/*  export const getUserPost = async (id) => {
+  const data = await axios.get(`${url}user/${id}/post`, {
+    headers: {
+      "app-id": appId,
+    },
+  });
+  console.log(data);
+  return data;
+};  */
