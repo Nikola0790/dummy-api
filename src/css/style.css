@@ -243,6 +243,10 @@
   font-size: 14px;
 }
 
+.container-singlePost .single-post-owner-data .editBtt {
+  margin-right: 150px;
+}
+
 .container-singlePost .single-post-owner-data button {
   height: 50px;
   padding: 10px 25px;
