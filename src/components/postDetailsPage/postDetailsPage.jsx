@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import {useState, useEffect} from 'react';
+import { useEffect} from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { actionsSinglePost } from "../../redux/singlePost/actions";
 import { Link } from "react-router-dom";
@@ -46,8 +46,11 @@ const SinglePostDetails = () => {
                             <p>{data.data.owner.title}. {data.data.owner.firstName} {data.data.owner.lastName}</p>
                             <p>ID: {data.data.owner.id}</p>
                         </div>
-                        <Link to="/editPost">
-                            <button>EDIT POST</button>
+                        <Link  to="/editPost">
+                            <button className="editBtt">EDIT POST</button>
+                        </Link>
+                        <Link className="createBtt" to="/createPost">
+                            <button>CREATE POST</button>
                         </Link>
                     </div>
                 </>
