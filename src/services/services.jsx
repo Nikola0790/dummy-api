@@ -27,8 +27,6 @@ export const updatePost = async (id, item) => {
   const data = await axios.put(`${url}post/${id}`, item, {
     headers: {
       "app-id": appId,
-      /* Accept: "application/json",
-      "Content-Type": "application/json", */
     },
   });
   return data;
@@ -40,11 +38,10 @@ export const createPost = async (post) => {
   const data = await axios.post(`${url}post/create`, post, {
     headers: {
       "app-id": appId,
-    }
+    },
   });
   return data;
-}
-
+};
 
 /*  export const getUserPost = async (id) => {
   const data = await axios.get(`${url}user/${id}/post`, {

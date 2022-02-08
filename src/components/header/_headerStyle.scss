@@ -1,33 +1,33 @@
 @import "../../css/variables";
 
 .container-header {
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: $backgroundColorWhite;
+  color: $fontColorPink;
+  div:first-child {
     display: flex;
-    justify-content: space-between;
-    background-color: $backgroundColorWhite;
-    color: $fontColorPink;
-    div:first-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        p {
-            font-weight: bold;
-        }
+    align-items: center;
+    justify-content: center;
+    p {
+      font-weight: bold;
     }
-    .bttMain {
-        button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 15px;
-            cursor: pointer;
-            color: $fontColorWhite;
-            background-color: $iconLikeColor;
-        }
-        button:hover {
-            background-color: green;
-            transition: 0.4s;
-        }
+  }
+  .bttMain {
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      color: $fontColorWhite;
+      background-color: $iconLikeColor;
     }
+    button:hover {
+      background-color: green;
+      transition: 0.4s;
+    }
+  }
 }

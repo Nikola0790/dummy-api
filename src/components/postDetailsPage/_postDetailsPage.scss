@@ -1,83 +1,83 @@
 @import "../../css/variables";
 
 .container-singlePost {
-    width: 60%;
-    margin: 40px auto; 
-    .single-post-title {
-        text-align: center;
+  width: 60%;
+  margin: 40px auto;
+  .single-post-title {
+    text-align: center;
+    color: $fontColorWhite;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .single-post-image {
+    width: 100%;
+    height: 600px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .single-post-likes-tags {
+    display: flex;
+    margin: 10px 0;
+    p:first-child {
+      display: flex;
+      align-items: center;
+      i {
+        color: $iconLikeColor;
+      }
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 50px;
+      p {
+        padding: 5px;
+        background-color: $backgroundColorTags;
         color: $fontColorWhite;
-        text-transform: uppercase;
-        font-size: 20px;
-        margin-bottom: 20px;
+        margin-right: 5px;
+      }
     }
-    .single-post-image {
+  }
+  .single-post-owner-data {
+    display: flex;
+    margin: 50px 0;
+    position: relative;
+    .owner-picture {
+      height: 100px;
+      width: 20%;
+      margin-right: 30px;
+      img {
         width: 100%;
-        height: 600px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
+        height: 100%;
+      }
     }
-    .single-post-likes-tags {
-        display: flex;
-        margin: 10px 0;
-        p:first-child {
-            display: flex;
-            align-items: center;
-            i {
-                color: $iconLikeColor;
-            }
-        }
-        div {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 50px;
-            p {
-                padding: 5px;
-                background-color: $backgroundColorTags;
-                color: $fontColorWhite;
-                margin-right: 5px;
-            }
-        }
+    .owner-name-id {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 35px;
+      color: $fontColorWhite;
+      font-size: 20px;
+      p:last-child {
+        font-size: 14px;
+      }
     }
-    .single-post-owner-data {
-        display: flex;
-        margin: 50px 0;
-        position: relative;
-        .owner-picture {
-            height: 100px;
-            width: 20%;
-            margin-right: 30px;
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-        .owner-name-id {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            line-height: 35px;
-            color: $fontColorWhite;
-            font-size: 20px;
-            p:last-child {
-                font-size: 14px;
-            }
-        }
-        .editBtt {
-            margin-right: 150px;
-        }
-        button {
-            height: 50px;
-            padding: 10px 25px;
-            border-radius: 15px;
-            border: none;
-            font-weight: bold;
-            color: $fontColorWhite;
-            background-color: $iconLikeColor;
-            cursor: pointer;
-            position: absolute;
-            right: 0;
-        }
+    .editBtt {
+      margin-right: 150px;
     }
+    button {
+      height: 50px;
+      padding: 10px 25px;
+      border-radius: 15px;
+      border: none;
+      font-weight: bold;
+      color: $fontColorWhite;
+      background-color: $iconLikeColor;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+    }
+  }
 }

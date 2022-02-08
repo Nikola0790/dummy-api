@@ -1,17 +1,17 @@
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createPost } from "../../services/services";
 
 const CreatePost = () => {
   const navigate = useNavigate();
-  const dataO = useSelector(state => state.singlePost);
-  const {loading, data, error} = dataO;
+  const dataO = useSelector((state) => state.singlePost);
+  const { loading, data, error } = dataO;
   const [owner, setOwnerId] = useState(data.data.owner.id);
   const [image, setImage] = useState(data.data.image);
-  const [text , setText] = useState('');
+  const [text, setText] = useState("");
   const [likes, setLikes] = useState(0);
-  const [tagsss, setTags] = useState('');
+  const [tagsss, setTags] = useState("");
 
   const createNewPost = (e) => {
     e.preventDefault();
@@ -21,9 +21,9 @@ const CreatePost = () => {
     } else {
       tags = tagsss.split(",");
     }
-    createPost({owner, image, text, likes, tags});
-    navigate('/mainPage');
-  } 
+    createPost({ owner, image, text, likes, tags });
+    navigate("/mainPage");
+  };
 
   return (
     <div className="container-edit-post">
@@ -40,7 +40,7 @@ const CreatePost = () => {
               type="text"
               value={owner}
               onChange={(e) => setOwnerId(e.target.value)}
-            /> 
+            />
             <p>Text</p>
             <input
               type="text"
@@ -70,7 +70,7 @@ const CreatePost = () => {
         </>
       )}
     </div>
-  ) 
-}
+  );
+};
 
 export default CreatePost;
