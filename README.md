@@ -1,8 +1,26 @@
 # Project name
+
 DUMMY API
 
 ## Project status
-This project is currently in development.
+
+This project is currently in development. Users can view posts about dogs, then can edit post and can create new post.
+
+## Installation and Setup Instructions
+
+Clone down this repository. You will need node and npm installed on your machine.
+
+Installation:
+
+npm install
+
+To Start Server React:
+
+npm start
+
+To Visit App:
+
+localhost:3000
 
 # Getting Started with Create React App
 
