@@ -44,8 +44,13 @@
             .post-details {
                 margin-left: 20px;
                 width: 50%;
+                a {
+                    text-decoration: none;
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                }
                 .post-title {
-                    text-transform: uppercase;
+                    text-transform: uppercase;  
                 }
                 p:last-child {
                     display: flex;
